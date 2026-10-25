@@ -1,0 +1,136 @@
+/* Styles the navigation bar. */
+nav {
+  height: 80px; /* Sets the bar's height. */
+  width: 100%; /* Uses the full available width. */
+  max-width: 1200px; /* Limits the maximum width. */
+  margin: 0 auto; /* Centers the bar horizontally. */
+  display: flex; /* Arranges items in a row. */
+  justify-content: space-between; /* Spreads items apart. */
+  align-items: center; /* Centers items vertically. */
+  padding: 0 12px; /* Adds left and right space. */
+}
+
+/* Class for a centered container. */
+.row {
+  width: 100%; /* Uses the full available width. */
+  max-width: 1200px; /* Limits the maximum width. */
+  margin: 0 auto; /* Centers the container horizontally. */
+}
+
+/* Class for the navigation list. */
+.nav__link--list {
+  display: flex; /* Arranges items in a row. */
+  list-style: none; /* Removes bullets. */
+}
+
+/* Class for navigation links. */
+.nav__link--anchor {
+  margin: 0 12px; /* Adds left and right space. */
+}
+
+/* Styles the logo and brand name. */
+.personal__logo {
+  display: flex; /* Places logo and text in a row. */
+  align-items: center; /* Vertically centers logo and text. */
+  gap: 8px; /* Adds space between logo and text. */
+  font-size: 24px; /* Makes the brand name larger. */
+  font-weight: bold; /* Makes the brand name bold. */
+}
+
+/* Controls the logo image size. */
+.personal__logo img {
+  width: 30px; /* Makes the logo smaller. */
+}
+
+/* Styles the Sign Up link as a blue oval button. */
+.nav__link--anchor-primary {
+  background-color: #6415ff; /* Sets the blue-purple background. */
+  color: white; /* Makes the text white. */
+  padding: 8px 18px; /* Reduces the button's height and width. */
+  border-radius: 999px; /* Keeps the ends oval-shaped. */
+  text-decoration: none; /* Removes the underline. */
+  font-weight: bold; /* Makes the text bold. */
+}
+
+/* Styles the main heading. */
+h1 {
+  font-size: 60px; /* Sets the heading size. */
+  font-weight: normal; /* Makes the default heading weight normal. */
+}
+
+/* Makes the first part of the heading bold. */
+h1 strong {
+  font-weight: bold; /* Emphasizes the first phrase. */
+}
+
+/* Colors "for You" blue-purple. */
+h1 span {
+  color: #6415ff; /* Applies the blue-purple color. */
+}
+
+/* Arranges the text and image side by side. */
+main {
+  display: flex; /* Places the two columns next to each other. */
+  align-items: center; /* Vertically centers the columns. */
+  width: 100%; /* Uses the available width. */
+  max-width: 1200px; /* Limits the overall width. */
+  margin: 0 auto; /* Centers the content horizontally. */
+  padding: 0 12px; /* Adds space on the sides. */
+  box-sizing: border-box; /* Includes padding in the width. */
+}
+
+/* Styles the paragraph below the main heading. */
+main p {
+  font-size: 18px; /* Sets the paragraph text size. */
+  color: #243e63; /* Gives the text a dark blue-gray color. */
+  line-height: 1.6; /* Adds comfortable spacing between lines. */
+  max-width: 500px; /* Prevents the paragraph from becoming too wide. */
+}
+
+/* Sets the text column to 40% of the row. */
+.main__text {
+  flex: 0 0 40%; /* Reserves 40% of the row for text. */
+  box-sizing: border-box; /* Includes padding in the width. */
+}
+
+/* Sets the image column to 60% of the row. */
+.main__image {
+  flex: 0 0 60%; /* Reserves 60% of the row for the image. */
+  box-sizing: border-box; /* Includes padding in the width. */
+}
+
+/* Controls the illustration's displayed size. */
+.main__image img {
+  display: block; /* Removes extra space below the image. */
+  width: 100%; /* Fits the image to its column. */
+  max-width: 500px; /* Prevents the image from becoming too large. */
+  height: auto; /* Preserves the image proportions. */
+}
+
+/* Styles the customer logo strip. */
+.customers-logo-strip {
+  width: 100%; /* Fits the image within the left column. */
+  max-width: 400px; /* Prevents the logos from becoming too large. */
+  height: auto; /* Preserves the image proportions. */
+  margin-top: 4px; /* Adds space above the logos. */
+}
+
+/* Styles the email input field. */
+.email-input {
+  width: 100%; /* Uses the available width of the text column. */
+  max-width: 450px; /* Makes the field wider. */
+  padding: 20px 24px; /* Makes the field taller. */
+  margin: 20px 0; /* Adds space above and below. */
+  border: 2px solid #e5e7eb; /* Adds a light gray border. */
+  border-radius: 999px; /* Makes the ends fully rounded into an oval. */
+  font-size: 18px; /* Makes the text larger. */
+  box-sizing: border-box; /* Includes padding in the total width. */
+}
+
+/* Styles the customer section heading. */
+.customers-title {
+  font-size: 14px; /* Makes the text slightly smaller. */
+  font-weight: bold; /* Keeps the text bold. */
+  color: #243e63; /* Uses the dark blue-gray color. */
+  margin-bottom: 4px; /* Moves the logos closer to the text. */
+}

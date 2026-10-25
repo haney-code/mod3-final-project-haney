@@ -1,10 +1,117 @@
 <!doctype html>
+<!-- Declares an HTML5 document. -->
 <html lang="en">
+  <!-- Sets the page language to English. -->
   <head>
+    <!-- Contains page settings and linked files. -->
     <meta charset="UTF-8" />
+    <!-- Supports standard characters. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Adapts the page to screen size. -->
     <title>Document</title>
+    <!-- Sets the browser tab title. -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Connects the CSS file. -->
   </head>
-  <body></body>
+
+  <body>
+    <!-- Contains the visible page content. -->
+
+    <!-- Navigation bar containing the logo and links. -->
+    <nav>
+      <!-- Displays the logo on the left. -->
+      <div class="personal__logo">
+        <img src="assets/treact-logo.svg" alt="Treact Logo" />
+        <!-- Loads the SVG logo. -->
+        Treact
+        <!-- Displays the brand name beside the logo. -->
+      </div>
+
+      <!-- Contains the navigation links. -->
+      <ul class="nav__link--list">
+        <!-- About navigation item. -->
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor">About</a>
+          <!-- Displays the About link. -->
+        </li>
+
+        <!-- Blog navigation item. -->
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor">Blog</a>
+          <!-- Displays the Blog link. -->
+        </li>
+
+        <!-- Pricing navigation item. -->
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor">Pricing</a>
+          <!-- Displays the Pricing link. -->
+        </li>
+
+        <!-- Contact Us navigation item. -->
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor">Contact Us</a>
+          <!-- Displays the Contact Us link. -->
+        </li>
+
+        <!-- Login navigation item. -->
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor">Login</a>
+          <!-- Displays the Login link. -->
+        </li>
+
+        <!-- Sign Up navigation item with primary styling. -->
+        <li class="nav__link">
+          <a href="#" class="nav__link--anchor nav__link--anchor-primary">
+            Sign Up
+            <!-- Displays the Sign Up link. -->
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main section containing text and an image. -->
+    <main>
+      <!-- Left column containing the heading and customer information. -->
+      <div class="main__text">
+        <h1>
+          <strong>Beautiful React Templates</strong>
+          <!-- Makes the first part bold. -->
+          <span>for you.</span>
+          <!-- Allows the second part to have a different color. -->
+        </h1>
+
+        <!-- Displays the main paragraph. -->
+        <p>
+          Our templates are easy to setup, understand and customize. Fully
+          modular components with a variety of pages and components.
+        </p>
+
+        <!-- Provides a field for visitors to enter their email. -->
+        <input
+          type="email"
+          class="email-input"
+          placeholder="Your E-mail Address"
+          aria-label="Your E-mail Address"
+        />
+
+        <!-- Labels the customer logo section. -->
+        <p class="customers-title">Our Trusted Customers</p>
+
+        <!-- Displays the customer logos. -->
+        <img
+          class="customers-logo-strip"
+          src="assets/customers-logo-strip.png"
+          alt="Our customers"
+        />
+      </div>
+
+      <!-- Right column containing the SVG illustration. -->
+      <div class="main__image">
+        <img src="assets/design-illustration.svg" alt="Design illustration" />
+      </div>
+    </main>
+
+    <!-- Loads the JavaScript file. -->
+    <script src="script.js"></script>
+  </body>
 </html>
