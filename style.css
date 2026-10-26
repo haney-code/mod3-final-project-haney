@@ -159,27 +159,50 @@ main p {
   margin-bottom: 4px; /* Moves the logos closer to the text. */
 }
 
-/* Centers all text in the Features section. */
-.features {
-  text-align: center; /* Centers the label, heading, and paragraph. */
-  margin-top: 180px; /* Adds space above the section. */
+/* Styles the entire Container section. */
+.container {
+  padding: 80px 0;
+  text-align: center;
+  margin-top: 180px;
 }
 
-/* Makes the Features heading larger and centers it. */
-.features__title {
+/* Makes the Container heading larger and centers it. */
+.container__title {
   font-size: 56px; /* Increases the heading size. */
   text-align: center; /* Centers the heading. */
 }
 
-/* Colors the FEATURES label and Service heading purple-blue. */
-.features__subtitle,
-.features__title span {
+/* Colors the Container label and Service heading purple-blue. */
+.container__subtitle,
+.container__title span {
   color: #6415ff;
 }
 
-.features__description {
+.container__description {
   font-size: 20px;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+}
+
+/* Arranges the six services into three columns. */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 60px auto 0;
+  text-align: left;
+}
+
+/* Styles each service heading. */
+.service h3 {
+  font-size: 20px;
+}
+
+/* Styles each service description. */
+.service p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #243e63;
 }
