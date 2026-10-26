@@ -115,16 +115,40 @@ main p {
   margin-top: 4px; /* Adds space above the logos. */
 }
 
-/* Styles the email input field. */
+/* Holds the email field and button together. */
+.email-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  border: 2px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* Styles the email input field inside the container. */
 .email-input {
-  width: 100%; /* Uses the available width of the text column. */
-  max-width: 450px; /* Makes the field wider. */
-  padding: 20px 24px; /* Makes the field taller. */
-  margin: 20px 0; /* Adds space above and below. */
-  border: 2px solid #e5e7eb; /* Adds a light gray border. */
-  border-radius: 999px; /* Makes the ends fully rounded into an oval. */
-  font-size: 18px; /* Makes the text larger. */
-  box-sizing: border-box; /* Includes padding in the total width. */
+  flex: 1;
+  min-width: 0;
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+/* Styles the Get Started button. */
+.email-button {
+  background-color: #6415ff;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 /* Styles the customer section heading. */
@@ -133,4 +157,15 @@ main p {
   font-weight: bold; /* Keeps the text bold. */
   color: #243e63; /* Uses the dark blue-gray color. */
   margin-bottom: 4px; /* Moves the logos closer to the text. */
+}
+
+/* Centers all text in the Features section. */
+.features {
+  text-align: center; /* Centers the label, heading, and paragraph. */
+}
+
+/* Makes the Features heading larger and centers it. */
+.features__title {
+  font-size: 60px; /* Increases the heading size. */
+  text-align: center; /* Centers the heading. */
 }

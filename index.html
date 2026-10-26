@@ -87,12 +87,15 @@
         </p>
 
         <!-- Provides a field for visitors to enter their email. -->
-        <input
-          type="email"
-          class="email-input"
-          placeholder="Your E-mail Address"
-          aria-label="Your E-mail Address"
-        />
+        <div class="email-container">
+          <input
+            type="email"
+            class="email-input"
+            placeholder="Your E-mail Address"
+            aria-label="Your E-mail Address"
+          />
+          <button class="email-button">Get Started</button>
+        </div>
 
         <!-- Labels the customer logo section. -->
         <p class="customers-title">Our Trusted Customers</p>
@@ -110,6 +113,18 @@
         <img src="assets/design-illustration.svg" alt="Design illustration" />
       </div>
     </main>
+
+    <!-- Features section -->
+    <section class="features">
+      <p class="features__subtitle">FEATURES</p>
+
+      <h2 class="features__title">We Have Amazing Service.</h2>
+
+      <p class="features__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </section>
 
     <!-- Loads the JavaScript file. -->
     <script src="script.js"></script>
