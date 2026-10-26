@@ -162,10 +162,24 @@ main p {
 /* Centers all text in the Features section. */
 .features {
   text-align: center; /* Centers the label, heading, and paragraph. */
+  margin-top: 180px; /* Adds space above the section. */
 }
 
 /* Makes the Features heading larger and centers it. */
 .features__title {
-  font-size: 60px; /* Increases the heading size. */
+  font-size: 56px; /* Increases the heading size. */
   text-align: center; /* Centers the heading. */
+}
+
+/* Colors the FEATURES label and Service heading purple-blue. */
+.features__subtitle,
+.features__title span {
+  color: #6415ff;
+}
+
+.features__description {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
