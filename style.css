@@ -2,19 +2,19 @@
 nav {
   height: 80px; /* Sets the bar's height. */
   width: 100%; /* Uses the full available width. */
-  max-width: 1200px; /* Limits the maximum width. */
-  margin: 0 auto; /* Centers the bar horizontally. */
-  display: flex; /* Arranges items in a row. */
-  justify-content: space-between; /* Spreads items apart. */
-  align-items: center; /* Centers items vertically. */
   padding: 0 12px; /* Adds left and right space. */
+  box-sizing: border-box; /* Includes padding in the width. */
 }
 
-/* Class for a centered container. */
+/* Centers the row and arranges its contents. */
 .row {
-  width: 100%; /* Uses the full available width. */
+  display: flex; /* Places the logo and links in a row. */
+  justify-content: space-between; /* Pushes them apart. */
+  align-items: center; /* Centers them vertically. */
+  width: 100%; /* Uses the available width. */
   max-width: 1200px; /* Limits the maximum width. */
-  margin: 0 auto; /* Centers the container horizontally. */
+  height: 100%; /* Fills the navigation bar's height. */
+  margin: 0 auto; /* Centers the row horizontally. */
 }
 
 /* Class for the navigation list. */
