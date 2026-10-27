@@ -261,6 +261,8 @@ main {
 /* Sets the left text column to half the row. */
 .quality__text {
   width: 50%; /* Gives the text column half the width. */
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box; /* Includes padding in the width. */
   padding: 0 24px; /* Adds space inside the column. */
 }
@@ -301,6 +303,7 @@ main {
   text-decoration: none; /* Removes the underline. */
   font-weight: bold; /* Emphasizes the button text. */
   margin-top: 20px; /* Moves the button down slightly. */
+  align-self: flex-start;
 }
 
 /* Positions and sizes the screenshot column. */
