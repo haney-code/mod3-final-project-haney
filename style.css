@@ -1,20 +1,22 @@
 /* Styles the navigation bar. */
 nav {
-  height: 80px; /* Sets the bar's height. */
-  width: 100%; /* Uses the full available width. */
-  padding: 0 12px; /* Adds left and right space. */
-  box-sizing: border-box; /* Includes padding in the width. */
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 
-/* Centers the row and arranges its contents. */
+/* Creates a reusable, centered row. */
 .row {
-  display: flex; /* Places the logo and links in a row. */
-  justify-content: space-between; /* Pushes them apart. */
-  align-items: center; /* Centers them vertically. */
-  width: 100%; /* Uses the available width. */
-  max-width: 1200px; /* Limits the maximum width. */
-  height: 100%; /* Fills the navigation bar's height. */
-  margin: 0 auto; /* Centers the row horizontally. */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Class for the navigation list. */
