@@ -229,3 +229,73 @@ main p {
   flex-shrink: 0;
   margin-top: 30px;
 }
+
+/* Adds vertical spacing around the Quality Work section. */
+.quality {
+  padding: 80px 0;
+}
+
+/* Centers the section and arranges its two columns. */
+.quality .row {
+  display: flex; /* Places the two columns side by side. */
+  width: 100%; /* Uses the available width. */
+  max-width: 1200px; /* Limits the section width. */
+  margin: 0 auto; /* Centers the section horizontally. */
+}
+
+/* Sets the left text column to half the row. */
+.quality__text {
+  width: 50%; /* Gives the text column half the width. */
+  box-sizing: border-box; /* Includes padding in the width. */
+  padding: 0 24px; /* Adds space inside the column. */
+}
+
+/* Styles the QUALITY WORK label. */
+.quality__subtitle {
+  color: #6415ff; /* Uses the purple-blue accent color. */
+  font-size: 16px; /* Sets the label size. */
+  font-weight: bold; /* Emphasizes the label. */
+}
+
+/* Styles the main heading. */
+.quality__title {
+  font-size: 56px; /* Makes the heading large. */
+  font-weight: bold; /* Makes the heading bold. */
+  color: #243e63; /* Uses the dark blue-gray text color. */
+}
+
+/* Colors Professionals purple-blue. */
+.quality__title span {
+  color: #6415ff; /* Applies the purple-blue accent. */
+}
+
+/* Styles the paragraph below the heading. */
+.quality__description {
+  font-size: 18px; /* Sets the paragraph size. */
+  line-height: 1.6; /* Improves readability. */
+  color: #243e63; /* Uses the dark blue-gray text color. */
+}
+
+/* Styles Learn More as a purple-blue oval button. */
+.quality__button {
+  display: inline-block; /* Allows padding around the link. */
+  background-color: #6415ff; /* Sets the button background. */
+  color: white; /* Makes the text white. */
+  padding: 8px 36px; /* Adds space inside the button. */
+  border-radius: 999px; /* Creates the oval shape. */
+  text-decoration: none; /* Removes the underline. */
+  font-weight: bold; /* Emphasizes the button text. */
+}
+
+/* Positions and sizes the screenshot column. */
+.quality__image {
+  width: 50%; /* Gives the image column half the row. */
+  box-sizing: border-box; /* Includes padding in the width. */
+}
+
+/* Makes the screenshot fit inside its column. */
+.quality__image img {
+  display: block; /* Removes extra inline-image spacing. */
+  width: 100%; /* Fills the available column width. */
+  height: auto; /* Preserves the image proportions. */
+}
