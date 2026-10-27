@@ -187,13 +187,12 @@ main p {
   text-align: center;
 }
 
-/* Arranges the six services into three columns. */
+/* Arranges the service items in a row. */
 .services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1000px;
-  margin: 60px auto 0;
+  display: flex; /* Arranges the service items in a row. */
+  flex-wrap: wrap; /* Allows items to continue onto a second row. */
+  max-width: 1000px; /* Limits the overall width of the service section. */
+  margin: 60px auto 0; /* Adds space above and centers the section horizontally. */
   text-align: left;
 }
 
@@ -209,11 +208,18 @@ main p {
   color: #243e63;
 }
 
-/* Places each service icon beside its text. */
+/* Places each service icon beside its text and sets its width to one-third. */
 .service {
   display: flex;
+  width: calc(100% / 3);
   align-items: flex-start;
   gap: 16px;
+}
+
+/* Arranges the service heading and description vertically. */
+.service__description {
+  display: flex; /* Makes the description area a Flexbox container. */
+  flex-direction: column; /* Stacks the heading above the paragraph. */
 }
 
 /* Controls the size and vertical position of each service icon. */
