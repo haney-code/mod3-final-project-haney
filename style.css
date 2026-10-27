@@ -9,14 +9,19 @@ nav {
   box-sizing: border-box;
 }
 
-/* Creates a reusable, centered row. */
+/* Creates a reusable, centered Flexbox row. */
 .row {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+}
+
+/* Spreads the logo and links across the navigation row. */
+nav .row {
+  justify-content: space-between;
 }
 
 /* Class for the navigation list. */
@@ -56,7 +61,7 @@ nav {
 
 /* Styles the main heading. */
 h1 {
-  font-size: 60px; /* Sets the heading size. */
+  font-size: 52px; /* Sets the heading size. */
   font-weight: normal; /* Makes the default heading weight normal. */
 }
 
@@ -75,13 +80,15 @@ main {
   width: 100%;
 }
 
-/* Arranges the hero text and image side by side. */
-.hero .container {
-  display: flex;
-  align-items: center;
+/* Adds vertical spacing around the Hero section. */
+.hero {
+  padding: 80px 0;
+}
+
+/* Arranges the Hero text and image side by side. */
+.hero .row {
+  justify-content: flex-start;
   gap: 24px;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
 /* Styles the paragraph below the main heading. */
@@ -94,7 +101,7 @@ main {
 
 /* Sets the text column to 40% of the row. */
 .main__text {
-  flex: 0 0 40%; /* Reserves 40% of the row for text. */
+  flex: 0 0 50%; /* Reserves 40% of the row for text. */
   box-sizing: border-box; /* Includes padding in the width. */
 }
 
@@ -249,12 +256,9 @@ main {
   padding: 80px 0;
 }
 
-/* Centers the section and arranges its two columns. */
+/* Arranges the Quality Work columns side by side. */
 .quality .row {
-  display: flex; /* Places the two columns side by side. */
-  width: 100%; /* Uses the available width. */
-  max-width: 1200px; /* Limits the section width. */
-  margin: 0 auto; /* Centers the section horizontally. */
+  justify-content: flex-start;
 }
 
 /* Sets the left text column to half the row. */
