@@ -9,14 +9,11 @@ nav {
   box-sizing: border-box;
 }
 
-/* Creates a reusable, centered Flexbox row. */
+/* Arranges child elements in a centered, vertically aligned row. */
 .row {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 
 /* Spreads the logo and links across the navigation row. */
@@ -101,7 +98,7 @@ main {
 
 /* Sets the text column to 40% of the row. */
 .main__text {
-  flex: 0 0 50%; /* Reserves 40% of the row for text. */
+  flex: 0 0 50%; /* Reserves 50% of the row for text. */
   box-sizing: border-box; /* Includes padding in the width. */
 }
 
@@ -174,13 +171,13 @@ main {
   margin-top: 64px;
 }
 
-/* Centers content and limits its maximum width. */
+/* Centers content, limits its width, and adds horizontal spacing. */
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 12px;
-  box-sizing: border-box;
+  width: 100%; /* Allows the container to fill its available width. */
+  max-width: 1200px; /* Prevents the container from growing beyond 1200px. */
+  margin: 0 auto; /* Centers the container horizontally. */
+  padding: 0 12px; /* Adds 12px of space on the left and right. */
+  box-sizing: border-box; /* Includes padding within the container's width. */
 }
 
 /* Adds spacing and centers content in the Features section. */
