@@ -285,17 +285,37 @@ main p {
   border-radius: 999px; /* Creates the oval shape. */
   text-decoration: none; /* Removes the underline. */
   font-weight: bold; /* Emphasizes the button text. */
+  margin-top: 20px; /* Moves the button down slightly. */
 }
 
 /* Positions and sizes the screenshot column. */
 .quality__image {
-  width: 50%; /* Gives the image column half the row. */
-  box-sizing: border-box; /* Includes padding in the width. */
+  position: relative; /* Allows the positioning of decorative elements inside this column. */
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Creates the decorative 10-by-10 dot grid. */
+.quality__image::after {
+  content: ""; /* Creates the decorative element. */
+  position: absolute; /* Allows the grid to be positioned independently. */
+  right: -40px; /* Extends the grid to the right of the screenshot. */
+  bottom: -40px; /* Extends the grid below the screenshot. */
+  width: 80px; /* Keeps the grid 10 dots wide with an 8px gap. */
+  height: 80px; /* Keeps the grid 10 dots tall with an 8px gap. */
+  background-image: radial-gradient(
+    #6415ff 2px,
+    transparent 2px
+  ); /* Creates the dots. */
+  background-size: 8px 8px; /* Spaces the dots 8 pixels apart horizontally and vertically. */
+  z-index: 0; /* Places the dots in front of the column's background. */
 }
 
 /* Makes the screenshot fit inside its column. */
 .quality__image img {
-  display: block; /* Removes extra inline-image spacing. */
-  width: 100%; /* Fills the available column width. */
-  height: auto; /* Preserves the image proportions. */
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative; /* Establishes the screenshot's stacking position. */
+  z-index: 1; /* Places the screenshot above the decorative dots. */
 }
