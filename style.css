@@ -96,7 +96,7 @@ main {
   max-width: 500px; /* Prevents the paragraph from becoming too wide. */
 }
 
-/* Sets the text column to 40% of the row. */
+/* Sets the text column to 50% of the row. */
 .main__text {
   flex: 0 0 50%; /* Reserves 50% of the row for text. */
   box-sizing: border-box; /* Includes padding in the width. */
@@ -180,13 +180,13 @@ main {
   box-sizing: border-box; /* Includes padding within the container's width. */
 }
 
-/* Adds spacing and centers content in the Features section. */
-.features {
+/* Adds spacing and centers content in the Services section. */
+.services {
   padding: 80px 0;
   text-align: center;
 }
 
-/* Styles the Features section heading. */
+/* Styles the Services section heading. */
 .container__title {
   font-size: 56px; /* Increases the heading size. */
   text-align: center; /* Centers the heading. */
@@ -206,11 +206,11 @@ main {
 }
 
 /* Arranges the service items in a row. */
-.services {
-  display: flex; /* Arranges the service items in a row. */
-  flex-wrap: wrap; /* Allows items to continue onto a second row. */
-  max-width: 1000px; /* Limits the overall width of the service section. */
-  margin: 60px auto 0; /* Adds space above and centers the section horizontally. */
+.services__grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 60px auto 0;
   text-align: left;
 }
 
