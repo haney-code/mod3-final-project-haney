@@ -426,3 +426,36 @@ body {
   background-size: 14px 12px;
   z-index: 0;
 }
+
+.values__subtitle {
+  color: #6415ff;
+}
+
+.values__title {
+  font-size: 56px;
+}
+
+.values__title span {
+  color: #6415ff;
+}
+
+.values__content {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.values__image {
+  width: 50%;
+  box-sizing: border-box;
+}
+.values__image img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.values__principle-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
