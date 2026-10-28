@@ -458,4 +458,33 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: flex-start;
+}
+
+.values__principles {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.values__principle p {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.value__img--wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.values__button {
+  display: inline-block;
+  background-color: #6415ff;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 24px;
 }
