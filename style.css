@@ -736,6 +736,11 @@ body {
   border: 1px solid #6415ff; /* Adds a blue-purple outline. */
 }
 
+.testimonial__arrows button svg {
+  width: 16px; /* Shrinks the arrow width. */
+  height: 16px; /* Shrinks the arrow height. */
+}
+
 /* Makes the customer's name larger. */
 .testimonial__author h4 {
   font-size: 20px; /* Increases the name size. */
@@ -754,8 +759,9 @@ body {
 
 /* Styles the blue call-to-action section. */
 .cta {
-  background-color: #6415ff; /* Matches the purple-blue heading text. */
-  padding: 64px 0;
+  background-color: #6415ff; /* Sets the purple background. */
+  padding: 80px 0 120px; /* Adds space inside the CTA. */
+  margin-bottom: 160px; /* Creates white space before the footer. */
 }
 
 /* Arranges the heading and buttons side by side. */
@@ -799,4 +805,89 @@ body {
 /* Gives Contact Us a transparent background and white outline. */
 .cta__button--secondary {
   border: 1px solid white; /* Adds a white outline. */
+}
+
+/* Styles the footer with the same purple-blue background as the CTA. */
+.footer {
+  background-color: #6415ff; /* Matches the CTA background. */
+  padding: 64px 0; /* Adds vertical space. */
+}
+
+/* Arranges the five footer columns in one row. */
+.footer__row {
+  display: flex; /* Places columns side by side. */
+  justify-content: space-between; /* Distributes columns evenly. */
+}
+
+/* Gives each column 20% of the available width. */
+.footer__column {
+  width: 20%; /* Reserves one-fifth of the row. */
+  display: flex; /* Enables vertical stacking. */
+  flex-direction: column; /* Stacks headings and links. */
+  gap: 16px; /* Adds space between links. */
+}
+
+/* Styles the footer headings. */
+.footer__column h3 {
+  color: white; /* Makes headings white. */
+  font-size: 16px; /* Sets heading size. */
+  text-transform: uppercase; /* Makes headings uppercase. */
+  margin: 0 0 8px; /* Adds space below headings. */
+}
+
+/* Styles the footer links. */
+.footer__column a {
+  color: white; /* Makes links white. */
+  font-size: 14px; /* Sets link size. */
+  text-decoration: none; /* Removes underlines. */
+}
+
+.footer__logo {
+  display: flex; /* Places the image and text side by side. */
+  align-items: center; /* Vertically centers the text with the image. */
+}
+
+.footer__logo img {
+  height: 32px; /* Sets the logo height. */
+  margin-right: 8px; /* Adds space between the logo and text. */
+}
+
+.footer__logo span {
+  color: white; /* Makes the text white. */
+  font-size: 24px; /* Sets the text size. */
+  font-weight: bold; /* Makes the text bold. */
+}
+
+.footer__copyright {
+  color: white; /* Makes the text white. */
+  font-size: 14px; /* Sets the text size. */
+  text-align: center; /* Centers the text. */
+}
+
+.footer__socials {
+  display: flex; /* Places the icons in a horizontal row. */
+  gap: 16px; /* Adds space between the circles. */
+}
+
+.footer__socials a {
+  display: flex; /* Centers the icon inside the circle. */
+  align-items: center; /* Centers the icon vertically. */
+  justify-content: center; /* Centers the icon horizontally. */
+  width: 36px; /* Sets the circle width. */
+  height: 36px; /* Sets the circle height. */
+  background-color: white; /* Makes the circle white. */
+  color: #6415ff; /* Makes the icon purple. */
+  border-radius: 50%; /* Turns the link into a circle. */
+  text-decoration: none; /* Removes the link underline. */
+}
+
+.footer__bottom {
+  display: flex; /* Places all three sections in one row. */
+  align-items: center; /* Vertically centers the sections. */
+  justify-content: space-between; /* Pushes logo left, copyright center, icons right. */
+  margin-top: 64px; /* Adds space above the bottom row. */
+}
+
+.footer__logo {
+  margin-top: 0; /* Removes the old top margin. */
 }
