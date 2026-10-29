@@ -488,3 +488,315 @@ body {
   font-weight: bold;
   margin-top: 24px;
 }
+
+.pricing {
+  padding: 96px 0;
+  text-align: center;
+}
+
+.pricing__subtitle {
+  color: #6415ff;
+  font-weight: bold;
+}
+
+.pricing__title {
+  font-size: 48px;
+}
+
+.pricing__title span {
+  color: #6415ff;
+}
+
+.pricing__description {
+  max-width: 600px;
+  margin: 24px auto 0;
+  line-height: 1.6;
+}
+
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  width: 100%;
+  margin-top: 48px;
+}
+
+.plan {
+  width: calc((100% - 64px) / 3);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  border: 1px solid #81e6d9;
+  border-radius: 8px;
+}
+
+.plan:nth-child(2) {
+  background-color: #6415ff;
+  color: white;
+  border-radius: 8px;
+}
+
+.plan__price {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 16px 0 4px;
+}
+
+.plan__duration {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.plan:nth-child(2) .plan__duration {
+  color: white;
+}
+
+.plan__button {
+  width: 100%;
+  max-width: 200px;
+  padding: 12px 24px;
+  margin-top: 32px;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.plan__button--personal {
+  background-color: #81e6d9;
+  color: white;
+}
+
+.plan__button--business {
+  background-color: white;
+  color: #6415ff;
+}
+
+.plan__button--enterprise {
+  background-color: #f6ad55 !important;
+  color: white;
+}
+
+.plan__duration {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.plan__button {
+  position: relative;
+}
+
+.plan__button::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -32px;
+  width: calc(100% + 64px);
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Adds a turquoise top strip to the first and third pricing cards. */
+.plan:not(:nth-child(2))::before {
+  content: "";
+  display: block;
+  width: calc(100% + 64px);
+  height: 10px;
+  background-color: #81e6d9;
+  border-radius: 8px 8px 0 0;
+  margin-top: -32px;
+  margin-bottom: 32px;
+}
+
+/* Changes the third pricing card's top strip to orange. */
+.plan:nth-child(3)::before {
+  background-color: #f6ad55;
+}
+
+/* Adds vertical spacing around the Testimonials section. */
+.testimonials {
+  padding: 80px 0;
+}
+
+/* Aligns the illustration and text side by side. */
+.testimonials .row {
+  justify-content: flex-start;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Sets the illustration column to 50% width. */
+.testimonials__image {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Makes the SVG fill its column. */
+.testimonials__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Sets the testimonial text column to 50% width. */
+.testimonials__content {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Colors the TESTIMONIAL label blue-purple. */
+.testimonials__subtitle {
+  color: #6415ff;
+  font-weight: bold;
+}
+
+/* Styles the main testimonial heading. */
+.testimonials__title {
+  font-size: 48px;
+  color: #243e63;
+}
+
+/* Colors "Love Us." blue-purple. */
+.testimonials__title span {
+  color: #6415ff;
+}
+
+/* Styles the testimonial description. */
+.testimonials__description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #243e63;
+}
+
+/* Colors and spaces the five stars. */
+.testimonial__rating {
+  color: #f6ad55; /* Makes the stars orange. */
+  font-size: 20px; /* Sets the star size. */
+  display: flex; /* Places the stars side by side. */
+  gap: 4px; /* Adds space between the stars. */
+  margin-top: 24px; /* Adds space above the stars. */
+}
+
+/* Styles the testimonial heading. */
+.testimonial__heading {
+  font-size: 20px; /* Sets the heading size. */
+  color: #243e63; /* Makes the heading dark blue. */
+}
+
+/* Styles the testimonial paragraph. */
+.testimonial__text {
+  font-size: 16px; /* Sets the paragraph size. */
+  line-height: 1.6; /* Adds space between lines. */
+  color: #243e63; /* Makes the text dark blue. */
+}
+
+/* Crops the photo into an oval. */
+.testimonial__avatar {
+  width: 48px; /* Sets the oval width. */
+  height: 56px; /* Sets the oval height. */
+  border-radius: 50%; /* Creates the oval shape. */
+  object-fit: cover; /* Crops out the extra image. */
+  object-position: center; /* Centers the crop. */
+}
+
+/* Arranges the photo, author, and arrows in one row. */
+.testimonial__bottom {
+  display: flex; /* Places the elements side by side. */
+  align-items: center; /* Vertically centers the elements. */
+  gap: 16px; /* Adds space between the elements. */
+  text-align: left; /* Aligns the author text to the left. */
+}
+
+/* Pushes the arrows to the right. */
+.testimonial__author {
+  flex: 1; /* Uses available space between the photo and arrows. */
+}
+
+/* Removes extra space around the name and title. */
+.testimonial__author h4,
+.testimonial__author p {
+  margin: 0; /* Removes default margins. */
+}
+
+/* Makes the arrows larger and blue-purple without enlarging the boxes. */
+.testimonial__arrows button {
+  font-size: 15px; /* Enlarges the arrow symbols. */
+  font-weight: 900; /* Makes the arrows thicker. */
+  color: #6415ff; /* Makes the arrows blue-purple. */
+  line-height: 1; /* Prevents extra height around the arrows. */
+  padding: 0; /* Removes extra space inside the buttons. */
+  width: 36px; /* Sets the circle's width. */
+  height: 36px; /* Sets the circle's height. */
+  border-radius: 50%; /* Makes the button circular. */
+  border: 1px solid #6415ff; /* Adds a blue-purple outline. */
+}
+
+/* Makes the customer's name larger. */
+.testimonial__author h4 {
+  font-size: 20px; /* Increases the name size. */
+}
+
+/* Makes the customer's job title larger. */
+.testimonial__author p {
+  font-size: 16px; /* Increases the job title size. */
+}
+
+/* Makes the customer's photo larger. */
+.testimonial__avatar {
+  width: 60px; /* Increases the photo width. */
+  height: 68px; /* Increases the photo height. */
+}
+
+/* Styles the blue call-to-action section. */
+.cta {
+  background-color: #6415ff; /* Matches the purple-blue heading text. */
+  padding: 64px 0;
+}
+
+/* Arranges the heading and buttons side by side. */
+.cta__row {
+  display: flex; /* Creates two columns. */
+  align-items: center; /* Vertically centers the content. */
+  justify-content: space-between; /* Separates the heading and buttons. */
+  gap: 32px; /* Adds space between the columns. */
+}
+
+/* Styles the heading in the left column. */
+.cta__row h2 {
+  width: 50%; /* Uses half the row. */
+  color: white; /* Makes the heading white. */
+  font-size: 32px; /* Sets the heading size. */
+}
+
+/* Arranges the buttons in the right column. */
+.cta__buttons {
+  width: 50%; /* Uses half the row. */
+  display: flex; /* Places the buttons side by side. */
+  justify-content: center; /* Centers the buttons in the column. */
+  gap: 24px; /* Adds space between the buttons. */
+}
+
+/* Styles both oval buttons. */
+.cta__button {
+  padding: 16px 32px; /* Adds space inside each button. */
+  border-radius: 999px; /* Creates the oval shape. */
+  color: white; /* Makes the text white. */
+  text-decoration: none; /* Removes the underline. */
+  font-weight: bold; /* Makes the text bold. */
+  white-space: nowrap; /* Keeps each label on one line. */
+}
+
+/* Makes Get Started orange. */
+.cta__button--primary {
+  background-color: #f56500; /* Sets the orange background. */
+}
+
+/* Gives Contact Us a transparent background and white outline. */
+.cta__button--secondary {
+  border: 1px solid white; /* Adds a white outline. */
+}
