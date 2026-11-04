@@ -22,55 +22,32 @@
   <body>
     <!-- Contains the visible page content. -->
 
-    <!-- Navigation bar containing the logo and links. -->
+    <!-- Navigation -->
     <nav>
       <div class="container">
         <div class="row">
-          <!-- Displays the logo on the left. -->
-          <div class="personal__logo">
+          <a href="#" class="personal__logo">
             <img src="assets/treact-logo.svg" alt="Treact Logo" />
-            <!-- Loads the SVG logo. -->
             Treact
-            <!-- Displays the brand name beside the logo. -->
-          </div>
+          </a>
 
-          <!-- Contains the navigation links. -->
+          <!-- Burger Menu -->
+          <button
+            class="btn__menu"
+            onclick="openMenu()"
+            aria-label="Open navigation menu"
+          >
+            ☰
+          </button>
           <ul class="nav__link--list">
-            <!-- About navigation item. -->
-            <li class="nav__link">
-              <a href="#" class="nav__link--anchor">About</a>
-              <!-- Displays the About link. -->
-            </li>
-
-            <!-- Blog navigation item. -->
-            <li class="nav__link">
-              <a href="#" class="nav__link--anchor">Blog</a>
-              <!-- Displays the Blog link. -->
-            </li>
-
-            <!-- Pricing navigation item. -->
-            <li class="nav__link">
-              <a href="#" class="nav__link--anchor">Pricing</a>
-              <!-- Displays the Pricing link. -->
-            </li>
-
-            <!-- Contact Us navigation item. -->
-            <li class="nav__link">
-              <a href="#" class="nav__link--anchor">Contact Us</a>
-              <!-- Displays the Contact Us link. -->
-            </li>
-
-            <!-- Login navigation item. -->
-            <li class="nav__link">
-              <a href="#" class="nav__link--anchor">Login</a>
-              <!-- Displays the Login link. -->
-            </li>
-
-            <!-- Sign Up navigation item with primary styling. -->
-            <li class="nav__link">
+            <li><a href="#" class="nav__link--anchor">About</a></li>
+            <li><a href="#" class="nav__link--anchor">Blog</a></li>
+            <li><a href="#" class="nav__link--anchor">Pricing</a></li>
+            <li><a href="#" class="nav__link--anchor">Contact Us</a></li>
+            <li><a href="#" class="nav__link--anchor">Login</a></li>
+            <li>
               <a href="#" class="nav__link--anchor nav__link--anchor-primary">
                 Sign Up
-                <!-- Displays the Sign Up link. -->
               </a>
             </li>
           </ul>

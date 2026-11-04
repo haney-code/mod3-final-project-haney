@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 /* Styles the navigation bar. */
 nav {
   height: 80px;
@@ -11,9 +13,10 @@ nav {
 
 /* Arranges child elements in a centered, vertically aligned row. */
 .row {
-  display: flex;
-  align-items: center;
-  width: 100%;
+  display: flex; /* Places children in a row. */
+  flex-wrap: wrap; /* Allows children to move to another line. */
+  align-items: center; /* Vertically aligns children. */
+  width: 100%; /* Uses the full available width. */
 }
 
 /* Spreads the logo and links across the navigation row. */
@@ -340,7 +343,7 @@ main {
 
 /* Sets the default font for the entire website. */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Adds spacing around the Steps section. */
@@ -890,4 +893,86 @@ body {
 
 .footer__logo {
   margin-top: 0; /* Removes the old top margin. */
+}
+
+/* Keeps padding and borders inside an element's width. */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevents images from overflowing their containers. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hides the hamburger menu on desktop. */
+.btn__menu {
+  display: none;
+}
+
+/* Adjusts navigation for tablets and mobile devices. */
+@media (max-width: 767px) {
+  .btn__menu {
+    display: block; /* Displays the hamburger button. */
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav__link--list {
+    display: none; /* Hides desktop navigation links. */
+  }
+
+  /* Positions the mobile navigation menu. */
+  .nav__link--list {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    gap: 24px;
+    z-index: 100;
+  }
+
+  /* Displays the mobile navigation when the menu is opened. */
+  .menu--open .nav__link--list {
+    display: flex;
+  }
+}
+
+/* TABLETS: Screens 768px to 1024px. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero .row {
+    gap: 20px; /* Reduces space between text and image. */
+  }
+
+  .main__text {
+    flex: 0 0 50%; /* Keeps text at half the available width. */
+  }
+
+  .main__image {
+    flex: 1; /* Uses the remaining space for the image. */
+  }
+
+  h1 {
+    font-size: 36px; /* Reduces heading size for tablets. */
+  }
+
+  .services__grid {
+    gap: 24px 0; /* Adds vertical spacing between rows. */
+  }
+
+  .service {
+    width: 50%; /* Displays two services per row. */
+    padding: 0 12px; /* Adds spacing inside each service. */
+  }
+
+  .container__title {
+    font-size: 42px; /* Reduces the Services heading size. */
+  }
 }
