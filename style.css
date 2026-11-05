@@ -1,5 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Keeps padding and borders inside an element's width. */
+* {
+  box-sizing: border-box;
+}
+
+/* Sets the default font for the entire website. */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Prevents images from overflowing their containers. */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contains the main page sections. */
+main {
+  width: 100%;
+}
+
+/* Arranges child elements in a centered, vertically aligned row. */
+.row {
+  display: flex; /* Places children in a row. */
+  flex-wrap: wrap; /* Allows children to move to another line. */
+  align-items: center; /* Vertically aligns children. */
+  width: 100%; /* Uses the full available width. */
+}
+
+/* Centers content, limits its width, and adds horizontal spacing. */
+.container {
+  width: 100%; /* Allows the container to fill its available width. */
+  max-width: 1200px; /* Prevents the container from growing beyond 1200px. */
+  margin: 0 auto; /* Centers the container horizontally. */
+  padding: 0 12px; /* Adds 12px of space on the left and right. */
+  box-sizing: border-box; /* Includes padding within the container's width. */
+}
+
+/* Styles the main section headings. */
+.container__title {
+  font-size: 48px; /* Sets the heading size. */
+  font-weight: 900; /* Makes the text extra bold. */
+  line-height: 1.5; /* Controls vertical spacing between lines. */
+  letter-spacing: 0.025em; /* Adds slight spacing between letters. */
+  color: #243e63; /* Sets the dark blue text color. */
+  margin: 16px 0; /* Adds space above and below the heading. */
+  text-align: center; /* Centers the heading horizontally. */
+}
+
+/* Styles the FEATURES label and purple heading text. */
+.container__subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #6415ff;
+}
+
+.container__title span {
+  color: #6415ff;
+}
+
+/* Styles the paragraph beneath the heading. */
+.container__description {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.625;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #7c8ba1;
+  text-align: center;
+}
+
 /* 
 
 NAVIGATION 
@@ -14,14 +87,6 @@ nav {
   align-items: center;
   padding: 0 12px;
   box-sizing: border-box;
-}
-
-/* Arranges child elements in a centered, vertically aligned row. */
-.row {
-  display: flex; /* Places children in a row. */
-  flex-wrap: wrap; /* Allows children to move to another line. */
-  align-items: center; /* Vertically aligns children. */
-  width: 100%; /* Uses the full available width. */
 }
 
 /* Spreads the logo and links across the navigation row. */
@@ -88,6 +153,16 @@ nav .row {
   font-weight: bold; /* Makes the text bold. */
 }
 
+/* Hides the hamburger menu on desktop. */
+.btn__menu {
+  display: none;
+}
+
+/* Hides the X button on desktop. */
+.nav__close {
+  display: none;
+}
+
 /* 
 
 HERO SECTION 
@@ -110,11 +185,6 @@ h1 strong {
 /* Colors "for You" blue-purple. */
 h1 span {
   color: #6415ff; /* Applies the blue-purple color. */
-}
-
-/* Contains the main page sections. */
-main {
-  width: 100%;
 }
 
 /* Adds vertical spacing around the Hero section. */
@@ -218,21 +288,6 @@ main {
 
 /* 
 
-CONTAINER 
-
-*/
-
-/* Centers content, limits its width, and adds horizontal spacing. */
-.container {
-  width: 100%; /* Allows the container to fill its available width. */
-  max-width: 1200px; /* Prevents the container from growing beyond 1200px. */
-  margin: 0 auto; /* Centers the container horizontally. */
-  padding: 0 12px; /* Adds 12px of space on the left and right. */
-  box-sizing: border-box; /* Includes padding within the container's width. */
-}
-
-/* 
-
 FEATURES SECTION 
 
 */
@@ -240,41 +295,6 @@ FEATURES SECTION
 /* Adds spacing and centers content in the Features section. */
 .features {
   padding: 80px 0;
-  text-align: center;
-}
-
-/* Styles the main section headings. */
-.container__title {
-  font-size: 48px; /* Sets the heading size. */
-  font-weight: 900; /* Makes the text extra bold. */
-  line-height: 1.5; /* Controls vertical spacing between lines. */
-  letter-spacing: 0.025em; /* Adds slight spacing between letters. */
-  color: #243e63; /* Sets the dark blue text color. */
-  margin: 16px 0; /* Adds space above and below the heading. */
-  text-align: center; /* Centers the heading horizontally. */
-}
-
-/* Styles the FEATURES label and purple heading text. */
-.container__subtitle {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: #6415ff;
-}
-
-.container__title span {
-  color: #6415ff;
-}
-
-/* Styles the paragraph beneath the heading. */
-.container__description {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.625;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #7c8ba1;
   text-align: center;
 }
 
@@ -425,11 +445,6 @@ FEATURES SECTION
   height: auto;
   position: relative; /* Establishes the screenshot's stacking position. */
   z-index: 1; /* Places the screenshot above the decorative dots. */
-}
-
-/* Sets the default font for the entire website. */
-body {
-  font-family: "Inter", sans-serif;
 }
 
 /* 
@@ -591,11 +606,6 @@ VALUES SECTION
   flex-shrink: 0;
 }
 
-/* Makes the Affordable ($) icon green. */
-.values__principle:first-child .value__img--wrapper {
-  background-color: #9ae6b4;
-}
-
 /* Makes the Professionalism icon light red-orange. */
 .values__principle:last-child .value__img--wrapper {
   background-color: #feb2b2;
@@ -691,16 +701,22 @@ PRICING SECTION
   margin: 16px 0 4px;
 }
 
+/* Styles the pricing plan duration and bottom divider. */
 .plan__duration {
   font-size: 12px;
   color: #9ca3af;
   margin: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .plan:nth-child(2) .plan__duration {
   color: white;
 }
 
+/* Styles the pricing plan buttons. */
 .plan__button {
   width: 100%;
   max-width: 200px;
@@ -710,6 +726,7 @@ PRICING SECTION
   border-radius: 999px;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
 }
 
 .plan__button--personal {
@@ -726,17 +743,6 @@ PRICING SECTION
 .plan__button--enterprise {
   background: linear-gradient(115deg, #f56565 0%, #feb2b2 100%);
   color: white;
-}
-
-.plan__duration {
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e5e7eb;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.plan__button {
-  position: relative;
 }
 
 .plan__button::before {
@@ -851,13 +857,13 @@ TESTIMONIALS SECTION
   color: #243e63; /* Makes the text dark blue. */
 }
 
-/* Crops the photo into an oval. */
+/* Styles the customer's photo as an oval. */
 .testimonial__avatar {
-  width: 48px; /* Sets the oval width. */
-  height: 56px; /* Sets the oval height. */
-  border-radius: 50%; /* Creates the oval shape. */
-  object-fit: cover; /* Crops out the extra image. */
-  object-position: center; /* Centers the crop. */
+  width: 60px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Arranges the photo, author, and arrows in one row. */
@@ -908,12 +914,6 @@ TESTIMONIALS SECTION
 .testimonial__author p {
   font-size: 16px; /* Increases the job title size. */
   color: #7c8ba1; /* Makes Director, Delos Inc light gray. */
-}
-
-/* Makes the customer's photo larger. */
-.testimonial__avatar {
-  width: 60px; /* Increases the photo width. */
-  height: 68px; /* Increases the photo height. */
 }
 
 /*
@@ -1036,9 +1036,11 @@ FOOTER SECTION
   text-decoration: none; /* Removes underlines. */
 }
 
+/* Aligns the footer logo and text. */
 .footer__logo {
-  display: flex; /* Places the image and text side by side. */
-  align-items: center; /* Vertically centers the text with the image. */
+  display: flex;
+  align-items: center;
+  margin-top: 0;
 }
 
 .footer__logo img {
@@ -1088,31 +1090,6 @@ FOOTER SECTION
   align-items: center; /* Vertically centers the sections. */
   justify-content: space-between; /* Pushes logo left, copyright center, icons right. */
   margin-top: 64px; /* Adds space above the bottom row. */
-}
-
-.footer__logo {
-  margin-top: 0; /* Removes the old top margin. */
-}
-
-/* Keeps padding and borders inside an element's width. */
-* {
-  box-sizing: border-box;
-}
-
-/* Prevents images from overflowing their containers. */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Hides the hamburger menu on desktop. */
-.btn__menu {
-  display: none;
-}
-
-/* Hides the X button on desktop. */
-.nav__close {
-  display: none;
 }
 
 /*
@@ -1383,11 +1360,11 @@ TABLETS: Screens 768px to 1024px.
     padding: 0 24px;
   }
 
- /* Displays the hamburger menu and moves it slightly right on tablets. */
-.btn__menu {
-  display: block;
-  margin-right: -10px;
-}
+  /* Displays the hamburger menu and moves it slightly right on tablets. */
+  .btn__menu {
+    display: block;
+    margin-right: -10px;
+  }
 
   /* Hides regular links and creates the tablet dropdown menu. */
   .nav__link--list {
