@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* 
+
+NAVIGATION 
+
+*/
 /* Styles the navigation bar. */
 nav {
   height: 80px;
@@ -30,9 +35,32 @@ nav .row {
   list-style: none; /* Removes bullets. */
 }
 
-/* Class for navigation links. */
+/* Styles navigation links. */
 .nav__link--anchor {
-  margin: 0 12px; /* Adds left and right space. */
+  margin: 0 20px;
+  font-size: 14px; /* Makes navigation text smaller. */
+  text-decoration: none;
+}
+
+/* Adds extra space before Login. */
+.nav__link--list li:nth-child(5) {
+  margin-left: 16px;
+}
+
+/* Moves Sign Up closer to Login. */
+.nav__link--list li:last-child .nav__link--anchor {
+  margin-left: 4px;
+}
+
+/* Underlines navigation links when hovered. */
+.nav__link--anchor:hover {
+  text-decoration: underline;
+}
+
+/* Darkens Sign Up when hovered without underlining. */
+.nav__link--anchor-primary:hover {
+  background-color: #5011cc; /* Darker purple. */
+  text-decoration: none; /* Removes hover underline. */
 }
 
 /* Styles the logo and brand name. */
@@ -42,6 +70,7 @@ nav .row {
   gap: 8px; /* Adds space between logo and text. */
   font-size: 24px; /* Makes the brand name larger. */
   font-weight: bold; /* Makes the brand name bold. */
+  text-decoration: none;
 }
 
 /* Controls the logo image size. */
@@ -59,9 +88,17 @@ nav .row {
   font-weight: bold; /* Makes the text bold. */
 }
 
+/* 
+
+HERO SECTION 
+
+*/
+
 /* Styles the main heading. */
 h1 {
-  font-size: 52px; /* Sets the heading size. */
+  font-size: 48px;
+  color: #1a202c;
+  line-height: 1.25;
   font-weight: normal; /* Makes the default heading weight normal. */
 }
 
@@ -174,6 +211,12 @@ main {
   margin-top: 64px;
 }
 
+/* 
+
+CONTAINER 
+
+*/
+
 /* Centers content, limits its width, and adds horizontal spacing. */
 .container {
   width: 100%; /* Allows the container to fill its available width. */
@@ -183,33 +226,55 @@ main {
   box-sizing: border-box; /* Includes padding within the container's width. */
 }
 
-/* Adds spacing and centers content in the Services section. */
-.services {
+/* 
+
+FEATURES SECTION 
+
+*/
+
+/* Adds spacing and centers content in the Features section. */
+.features {
   padding: 80px 0;
   text-align: center;
 }
 
-/* Styles the Services section heading. */
+/* Styles the main section headings. */
 .container__title {
-  font-size: 56px; /* Increases the heading size. */
-  text-align: center; /* Centers the heading. */
+  font-size: 48px; /* Sets the heading size. */
+  font-weight: 900; /* Makes the text extra bold. */
+  line-height: 1.5; /* Controls vertical spacing between lines. */
+  letter-spacing: 0.025em; /* Adds slight spacing between letters. */
+  color: #243e63; /* Sets the dark blue text color. */
+  margin: 16px 0; /* Adds space above and below the heading. */
+  text-align: center; /* Centers the heading horizontally. */
 }
 
-/* Colors the Container label and Service heading purple-blue. */
-.container__subtitle,
+/* Styles the FEATURES label and purple heading text. */
+.container__subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #6415ff;
+}
+
 .container__title span {
   color: #6415ff;
 }
 
+/* Styles the paragraph beneath the heading. */
 .container__description {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.625;
   max-width: 600px;
   margin: 0 auto;
+  color: #7c8ba1;
   text-align: center;
 }
 
-/* Arranges the service items in a row. */
-.services__grid {
+/* Arranges the feature items in a row. */
+.features__grid {
   display: flex;
   flex-wrap: wrap;
   max-width: 1000px;
@@ -217,39 +282,48 @@ main {
   text-align: left;
 }
 
-/* Styles each service heading. */
-.service h3 {
+/* Styles each feature heading. */
+.feature h3 {
   font-size: 20px;
-}
-
-/* Styles each service description. */
-.service p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-weight: 600;
   color: #243e63;
 }
 
-/* Places each service icon beside its text and sets its width to one-third. */
-.service {
+/* Styles each feature description. */
+.feature p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  color: #7c8ba1;
+}
+
+/* Places each feature icon beside its text and sets its width to one-third. */
+.feature {
   display: flex;
   width: calc(100% / 3);
   align-items: flex-start;
   gap: 16px;
 }
 
-/* Arranges the service heading and description vertically. */
-.service__description {
+/* Arranges the feature heading and description vertically. */
+.feature__description {
   display: flex; /* Makes the description area a Flexbox container. */
   flex-direction: column; /* Stacks the heading above the paragraph. */
 }
 
-/* Controls the size and vertical position of each service icon. */
-.service__icon {
+/* Controls the size and vertical position of each feature icon. */
+.feature__icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
   margin-top: 30px;
 }
+
+/* 
+  
+  QUALITY WORK SECTION 
+  
+  */
 
 /* Adds vertical spacing around the Quality Work section. */
 .quality {
@@ -272,16 +346,18 @@ main {
 
 /* Styles the QUALITY WORK label. */
 .quality__subtitle {
-  color: #6415ff; /* Uses the purple-blue accent color. */
-  font-size: 16px; /* Sets the label size. */
-  font-weight: bold; /* Emphasizes the label. */
+  color: #6415ff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 40px; /* Moves QUALITY WORK lower. */
 }
 
 /* Styles the main heading. */
 .quality__title {
-  font-size: 56px; /* Makes the heading large. */
-  font-weight: bold; /* Makes the heading bold. */
-  color: #243e63; /* Uses the dark blue-gray text color. */
+  font-size: 56px;
+  font-weight: bold;
+  color: #243e63;
+  margin-top: 0; /* Moves the heading closer to QUALITY WORK. */
 }
 
 /* Colors Professionals purple-blue. */
@@ -298,15 +374,20 @@ main {
 
 /* Styles Learn More as a purple-blue oval button. */
 .quality__button {
-  display: inline-block; /* Allows padding around the link. */
-  background-color: #6415ff; /* Sets the button background. */
-  color: white; /* Makes the text white. */
-  padding: 8px 36px; /* Adds space inside the button. */
-  border-radius: 999px; /* Creates the oval shape. */
-  text-decoration: none; /* Removes the underline. */
-  font-weight: bold; /* Emphasizes the button text. */
-  margin-top: 20px; /* Moves the button down slightly. */
+  display: inline-block;
+  background-color: #6415ff;
+  color: white;
+  padding: 12px 24px; /* Makes the button taller and narrower. */
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
   align-self: flex-start;
+}
+
+/* Darkens the Learn More button when hovered. */
+.quality__button:hover {
+  background-color: #5011cc; /* Darker purple. */
 }
 
 /* Positions and sizes the screenshot column. */
@@ -346,6 +427,12 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* 
+
+STEPS SECTION 
+
+*/
+
 /* Adds spacing around the Steps section. */
 .steps {
   padding: 80px 0;
@@ -354,7 +441,7 @@ body {
 .steps__image {
   position: relative;
   width: 50%;
-  margin-top: 80px;
+  margin-top: 0; /* Aligns the image with the top of the text column. */
 }
 
 /* Makes the image fill its column. */
@@ -370,12 +457,13 @@ body {
   width: 50%;
   display: flex;
   flex-direction: column;
+  transform: translateY(-120px); /* Moves the text column above the image. */
 }
 
 /* Displays each step's number and text side by side. */
 .steps__item {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   align-items: flex-start;
   margin-bottom: 24px;
 }
@@ -396,13 +484,15 @@ body {
 
 .steps__item h4 {
   margin-top: 0;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-/* Adds space between the columns and aligns them at the top. */
+/* Places the Steps image and text side by side. */
 .steps .row {
-  gap: 48px;
-  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns both columns at the top. */
+  gap: 0;
 }
 
 .steps__title span {
@@ -411,6 +501,7 @@ body {
 
 .steps__subtitle {
   color: #6415ff;
+  transform: translateY(40px); /* Moves only STEPS down 10px. */
 }
 
 .steps__title {
@@ -430,6 +521,12 @@ body {
   z-index: 0;
 }
 
+/* 
+
+VALUES SECTION 
+
+*/
+
 .values__subtitle {
   color: #6415ff;
 }
@@ -445,6 +542,7 @@ body {
 .values__content {
   width: 50%;
   box-sizing: border-box;
+  transform: translateY(-40px); /* Moves Values text up. */
 }
 
 .values__image {
@@ -476,21 +574,50 @@ body {
   padding-left: 0;
 }
 
+/* Adds a green circle around the dollar icon. */
 .value__img--wrapper {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #9ae6b4; /* Light green circle. */
+  flex-shrink: 0;
 }
 
+/* Makes the Affordable ($) icon green. */
+.values__principle:first-child .value__img--wrapper {
+  background-color: #9ae6b4;
+}
+
+/* Makes the Professionalism icon light red-orange. */
+.values__principle:last-child .value__img--wrapper {
+  background-color: #feb2b2;
+}
+
+/* Matches the Quality Work Learn More button. */
 .values__button {
   display: inline-block;
   background-color: #6415ff;
   color: white;
-  padding: 12px 32px;
+  padding: 12px 24px; /* Matches button height and width. */
   border-radius: 999px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 24px;
+  margin-top: 20px;
 }
+
+/* Darkens the button when hovered. */
+.values__button:hover {
+  background-color: #5011cc;
+}
+
+/* 
+
+PRICING SECTION 
+
+*/
 
 .pricing {
   padding: 96px 0;
@@ -514,6 +641,7 @@ body {
   max-width: 600px;
   margin: 24px auto 0;
   line-height: 1.6;
+  color: #7c8ba1; /* Makes the paragraph light gray. */
 }
 
 .plans {
@@ -539,6 +667,17 @@ body {
   background-color: #6415ff;
   color: white;
   border-radius: 8px;
+}
+
+/* Styles the pricing plan descriptions. */
+.plan__features-title {
+  font-size: 18px;
+  font-weight: bold; /* Makes all three descriptions bold. */
+}
+
+/* Makes pricing plan features light gray. */
+.plan:not(:nth-child(2)) > p:not(.plan__duration):not(.plan__features-title) {
+  color: #7c8ba1;
 }
 
 .plan__price {
@@ -578,8 +717,9 @@ body {
   color: #6415ff;
 }
 
+/* Gives the Enterprise button a red-to-pink gradient. */
 .plan__button--enterprise {
-  background-color: #f6ad55 !important;
+  background: linear-gradient(115deg, #f56565 0%, #feb2b2 100%);
   color: white;
 }
 
@@ -615,21 +755,29 @@ body {
   margin-bottom: 32px;
 }
 
-/* Changes the third pricing card's top strip to orange. */
+/* Gives the Enterprise top border a red-to-pink gradient. */
 .plan:nth-child(3)::before {
-  background-color: #f6ad55;
+  background: linear-gradient(115deg, #f56565 0%, #feb2b2 100%);
 }
+
+/*
+
+TESTIMONIALS SECTION
+
+*/
 
 /* Adds vertical spacing around the Testimonials section. */
 .testimonials {
   padding: 80px 0;
 }
 
-/* Aligns the illustration and text side by side. */
+/* Places the testimonial image and text side by side. */
 .testimonials .row {
-  justify-content: flex-start;
-  gap: 48px;
+  display: flex; /* Arranges the image and text horizontally. */
+  justify-content: space-between;
   align-items: center;
+  gap: 48px; /* Allows both 50% columns to fit. */
+  flex-wrap: nowrap; /* Keeps the image and text side by side. */
 }
 
 /* Sets the illustration column to 50% width. */
@@ -649,7 +797,7 @@ body {
 .testimonials__content {
   width: 50%;
   box-sizing: border-box;
-  text-align: center;
+  text-align: left; /* Aligns Testimonials and its heading to the left. */
 }
 
 /* Colors the TESTIMONIAL label blue-purple. */
@@ -679,7 +827,7 @@ body {
 /* Colors and spaces the five stars. */
 .testimonial__rating {
   color: #f6ad55; /* Makes the stars orange. */
-  font-size: 20px; /* Sets the star size. */
+  font-size: 16px; /* Sets the star size. */
   display: flex; /* Places the stars side by side. */
   gap: 4px; /* Adds space between the stars. */
   margin-top: 24px; /* Adds space above the stars. */
@@ -726,17 +874,19 @@ body {
   margin: 0; /* Removes default margins. */
 }
 
-/* Makes the arrows larger and blue-purple without enlarging the boxes. */
+/* Styles the testimonial navigation buttons. */
 .testimonial__arrows button {
-  font-size: 15px; /* Enlarges the arrow symbols. */
+  font-size: 15px; /* Sets the arrow size. */
   font-weight: 900; /* Makes the arrows thicker. */
-  color: #6415ff; /* Makes the arrows blue-purple. */
-  line-height: 1; /* Prevents extra height around the arrows. */
-  padding: 0; /* Removes extra space inside the buttons. */
-  width: 36px; /* Sets the circle's width. */
-  height: 36px; /* Sets the circle's height. */
-  border-radius: 50%; /* Makes the button circular. */
-  border: 1px solid #6415ff; /* Adds a blue-purple outline. */
+  color: #6415ff; /* Makes the arrows purple. */
+  background-color: #edf2f7; /* Light-gray background. */
+  line-height: 1; /* Centers the arrows vertically. */
+  padding: 0; /* Removes extra internal spacing. */
+  width: 48px; /* Sets the circle width. */
+  height: 48px; /* Sets the circle height. */
+  border-radius: 50%; /* Makes the buttons circular. */
+  border: none; /* Removes the outlines. */
+  cursor: pointer; /* Shows a pointer when hovering. */
 }
 
 .testimonial__arrows button svg {
@@ -752,6 +902,7 @@ body {
 /* Makes the customer's job title larger. */
 .testimonial__author p {
   font-size: 16px; /* Increases the job title size. */
+  color: #7c8ba1; /* Makes Director, Delos Inc light gray. */
 }
 
 /* Makes the customer's photo larger. */
@@ -759,6 +910,14 @@ body {
   width: 60px; /* Increases the photo width. */
   height: 68px; /* Increases the photo height. */
 }
+
+
+/*
+
+CALL TO ACTION SECTION
+
+*/
+
 
 /* Styles the blue call-to-action section. */
 .cta {
@@ -792,7 +951,7 @@ body {
 
 /* Styles both oval buttons. */
 .cta__button {
-  padding: 16px 32px; /* Adds space inside each button. */
+  padding: 12px 24px; /* Matches the earlier Learn More buttons. */
   border-radius: 999px; /* Creates the oval shape. */
   color: white; /* Makes the text white. */
   text-decoration: none; /* Removes the underline. */
@@ -805,10 +964,29 @@ body {
   background-color: #f56500; /* Sets the orange background. */
 }
 
+/* Darkens Get Started when hovered. */
+.cta__button--primary:hover {
+  background-color: #ea580c; /* Slightly darker orange on hover. */
+}
+
+/* Changes Contact Us to white with blue text on hover. */
+.cta__button--secondary:hover {
+  background-color: white;
+  color: #6415ff;
+}
+
 /* Gives Contact Us a transparent background and white outline. */
 .cta__button--secondary {
   border: 1px solid white; /* Adds a white outline. */
 }
+
+
+/*
+
+FOOTER SECTION
+
+*/
+
 
 /* Styles the footer with the same purple-blue background as the CTA. */
 .footer {
@@ -816,18 +994,30 @@ body {
   padding: 64px 0; /* Adds vertical space. */
 }
 
+/* Allows footer content to spread farther toward the edges. */
+.footer .container {
+  max-width: 1400px;
+}
+
 /* Arranges the five footer columns in one row. */
 .footer__row {
   display: flex; /* Places columns side by side. */
   justify-content: space-between; /* Distributes columns evenly. */
+  padding-left: 24px; /* Moves the left column inward. */
 }
 
 /* Gives each column 20% of the available width. */
 .footer__column {
-  width: 20%; /* Reserves one-fifth of the row. */
+  width: 10%; /* Reserves one-fifth of the row. */
   display: flex; /* Enables vertical stacking. */
   flex-direction: column; /* Stacks headings and links. */
   gap: 16px; /* Adds space between links. */
+}
+
+/* Underlines footer links in white when hovered. */
+.footer__column a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
 }
 
 /* Styles the footer headings. */
@@ -853,35 +1043,43 @@ body {
 .footer__logo img {
   height: 32px; /* Sets the logo height. */
   margin-right: 8px; /* Adds space between the logo and text. */
+  margin-left: 24px; /* Aligns the bottom logo with the Main column. */
 }
 
 .footer__logo span {
-  color: white; /* Makes the text white. */
+  color: white;
   font-size: 24px; /* Sets the text size. */
   font-weight: bold; /* Makes the text bold. */
 }
 
 .footer__copyright {
   color: white; /* Makes the text white. */
-  font-size: 14px; /* Sets the text size. */
+  font-size: 16px; /* Sets the text size. */
   text-align: center; /* Centers the text. */
 }
 
 .footer__socials {
   display: flex; /* Places the icons in a horizontal row. */
   gap: 16px; /* Adds space between the circles. */
+  margin-right: 20px; /* Moves the three icons slightly left. */
 }
 
 .footer__socials a {
   display: flex; /* Centers the icon inside the circle. */
   align-items: center; /* Centers the icon vertically. */
   justify-content: center; /* Centers the icon horizontally. */
-  width: 36px; /* Sets the circle width. */
-  height: 36px; /* Sets the circle height. */
+  width: 28px; /* Makes the circles smaller. */
+  height: 28px; /* Makes the circles smaller. */
   background-color: white; /* Makes the circle white. */
-  color: #6415ff; /* Makes the icon purple. */
+  color: black; /* Makes the three social icons black. */
   border-radius: 50%; /* Turns the link into a circle. */
   text-decoration: none; /* Removes the link underline. */
+  font-size: 14px; /* Makes the icons inside the circles smaller. */
+}
+
+/* Turns the white circles light gray when hovered. */
+.footer__socials a:hover {
+  background-color: #e2e8f0;
 }
 
 .footer__bottom {
@@ -910,6 +1108,13 @@ img {
 .btn__menu {
   display: none;
 }
+
+/*
+
+RESPONSIVE
+
+*/
+
 
 /* Adjusts navigation for tablets and mobile devices. */
 @media (max-width: 767px) {
@@ -963,16 +1168,145 @@ img {
     font-size: 36px; /* Reduces heading size for tablets. */
   }
 
-  .services__grid {
+  .features__grid {
     gap: 24px 0; /* Adds vertical spacing between rows. */
   }
 
-  .service {
-    width: 50%; /* Displays two services per row. */
-    padding: 0 12px; /* Adds spacing inside each service. */
+  .feature {
+    width: 50%; /* Displays two features per row. */
+    padding: 0 12px; /* Adds spacing inside each feature. */
   }
 
   .container__title {
-    font-size: 42px; /* Reduces the Services heading size. */
+    font-size: 42px; /* Reduces the Features heading size. */
+  }
+
+  /* Adjusts the Quality Work section for tablets. */
+  .quality__text {
+    width: 50%; /* Keeps text in the left column. */
+    padding: 0 16px; /* Reduces horizontal spacing. */
+  }
+
+  .quality__image {
+    width: 50%; /* Keeps the image in the right column. */
+  }
+
+  .quality__title {
+    font-size: 36px; /* Reduces heading size. */
+  }
+
+  .quality__description {
+    font-size: 16px; /* Reduces paragraph size. */
+  }
+
+  /* Adjusts the Steps section for tablets. */
+  .steps .row {
+    gap: 24px; /* Reduces space between columns. */
+  }
+
+  .steps__image {
+    width: calc(50% - 12px); /* Keeps the image in the left column. */
+  }
+
+  .steps__text {
+    width: calc(50% - 12px); /* Keeps the text in the right column. */
+  }
+
+  .steps__title {
+    font-size: 36px; /* Reduces heading size. */
+  }
+
+  .steps__item h4 {
+    font-size: 20px; /* Reduces step heading size. */
+  }
+
+  /* Adjusts the Values section for tablets. */
+  .values__content {
+    width: 50%; /* Keeps the text in the left column. */
+    padding-right: 16px; /* Adds space between text and image. */
+  }
+
+  .values__image {
+    width: 50%; /* Keeps the image in the right column. */
+  }
+
+  .values__title {
+    font-size: 36px; /* Reduces heading size. */
+  }
+
+  .values__principles {
+    gap: 16px; /* Adds space between the two principles. */
+  }
+
+  .values__principle {
+    flex: 1; /* Gives both principles equal width. */
+    min-width: 0; /* Allows columns to shrink when needed. */
+  }
+
+  /* Adjusts the Pricing section for tablets. */
+  .pricing__title {
+    font-size: 36px; /* Reduces heading size. */
+  }
+
+  .plans {
+    justify-content: center; /* Centers the pricing cards. */
+    gap: 24px; /* Adds space between cards. */
+  }
+
+  .plan {
+    width: calc(50% - 12px); /* Displays two cards per row. */
+  }
+
+  /* Adjusts the Testimonials section for tablets. */
+  .testimonials .row {
+    gap: 24px; /* Reduces space between columns. */
+  }
+
+  .testimonials__image {
+    width: calc(50% - 12px); /* Keeps image in the left column. */
+  }
+
+  .testimonials__content {
+    width: calc(50% - 12px); /* Keeps text in the right column. */
+  }
+
+  .testimonials__title {
+    font-size: 36px; /* Reduces heading size. */
+  }
+
+  .testimonials__description {
+    font-size: 16px; /* Reduces paragraph size. */
+  }
+
+  /* Adjusts the CTA section for tablets. */
+  .cta__row {
+    flex-direction: column; /* Stacks heading above buttons. */
+    gap: 24px; /* Adds space between heading and buttons. */
+  }
+
+  .cta__row h2 {
+    width: 100%; /* Allows heading to use the full width. */
+    font-size: 28px; /* Reduces heading size. */
+    text-align: center; /* Centers the heading. */
+  }
+
+  .cta__buttons {
+    width: 100%; /* Allows buttons to use the full width. */
+    justify-content: center; /* Centers both buttons. */
+    gap: 16px; /* Reduces space between buttons. */
+  }
+
+  /* Adjusts the Footer section for tablets. */
+  .footer__row {
+    flex-wrap: wrap; /* Allows columns to move onto another row. */
+    gap: 32px 0; /* Adds vertical space between rows. */
+  }
+
+  .footer__column {
+    width: 33.333%; /* Displays three columns per row. */
+  }
+
+  .footer__bottom {
+    gap: 24px; /* Adds space between footer elements. */
   }
 }
