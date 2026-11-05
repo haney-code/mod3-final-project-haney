@@ -202,6 +202,11 @@ main {
   white-space: nowrap;
 }
 
+/* Darkens the Hero Get Started button when hovered. */
+.email-button:hover {
+  background-color: #5011cc;
+}
+
 /* Styles the customer section heading. */
 .customers-title {
   font-size: 14px;
@@ -911,13 +916,11 @@ TESTIMONIALS SECTION
   height: 68px; /* Increases the photo height. */
 }
 
-
 /*
 
 CALL TO ACTION SECTION
 
 */
-
 
 /* Styles the blue call-to-action section. */
 .cta {
@@ -980,13 +983,11 @@ CALL TO ACTION SECTION
   border: 1px solid white; /* Adds a white outline. */
 }
 
-
 /*
 
 FOOTER SECTION
 
 */
-
 
 /* Styles the footer with the same purple-blue background as the CTA. */
 .footer {
@@ -1109,14 +1110,23 @@ img {
   display: none;
 }
 
+/* Hides the X button on desktop. */
+.nav__close {
+  display: none;
+}
+
 /*
 
 RESPONSIVE
 
 */
 
+/* 
 
-/* Adjusts navigation for tablets and mobile devices. */
+Adjusts navigation for tablets and mobile devices. 
+
+*/
+
 @media (max-width: 767px) {
   .btn__menu {
     display: block; /* Displays the hamburger button. */
@@ -1126,14 +1136,192 @@ RESPONSIVE
     cursor: pointer;
   }
 
-  .nav__link--list {
-    display: none; /* Hides desktop navigation links. */
+  /* Stacks Hero text and image vertically on phones. */
+  .hero .row {
+    flex-direction: column;
   }
 
-  /* Positions the mobile navigation menu. */
+  /* Allows Hero text to use the full screen width. */
+  .main__text {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* Makes the Hero image fit the screen. */
+  .main__image {
+    width: 100%;
+  }
+
+  /* Reduces the heading size for phones. */
+  h1 {
+    font-size: 32px;
+  }
+
+  /* Displays one feature per row on phones. */
+  .feature {
+    width: 100%;
+  }
+
+  /* Stacks Quality Work text and image vertically on phones. */
+  .quality .row {
+    flex-direction: column;
+  }
+
+  /* Makes Quality Work text fill the screen width. */
+  .quality__text {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  /* Makes the Quality Work image fill the screen width. */
+  .quality__image {
+    width: 100%;
+  }
+
+  /* Reduces the Quality Work heading size on phones. */
+  .quality__title {
+    font-size: 32px;
+  }
+
+  /* Stacks the Steps image and text vertically on phones. */
+  .steps .row {
+    flex-direction: column;
+  }
+
+  /* Makes the Steps image fill the screen width. */
+  .steps__image {
+    width: 100%;
+  }
+
+  /* Makes the Steps text fill the screen width. */
+  .steps__text {
+    width: 100%;
+    transform: none;
+  }
+
+  /* Reduces the Steps heading size on phones. */
+  .steps__title {
+    font-size: 32px;
+  }
+
+  /* Removes the vertical offset from the Steps label. */
+  .steps__subtitle {
+    transform: none;
+  }
+
+  /* Stacks Values text and image vertically on phones. */
+  .values .row {
+    flex-direction: column;
+  }
+
+  /* Makes Values text fill the screen width. */
+  .values__content {
+    width: 100%;
+    transform: none;
+  }
+
+  /* Makes the Values image fill the screen width. */
+  .values__image {
+    width: 100%;
+  }
+
+  /* Reduces the Values heading size on phones. */
+  .values__title {
+    font-size: 32px;
+  }
+
+  /* Stacks Affordable and Professionalism vertically on phones. */
+  .values__principles {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Makes each principle fill the available width. */
+  .values__principle {
+    width: 100%;
+  }
+
+  /* Stacks the three pricing cards vertically on phones. */
+  .plans {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Makes each pricing card fill the available width. */
+  .plan {
+    width: 100%;
+  }
+
+  /* Reduces the Pricing heading size on phones. */
+  .pricing__title {
+    font-size: 32px;
+  }
+
+  /* Stacks the Testimonials image and text vertically on phones. */
+  .testimonials .row {
+    flex-direction: column;
+  }
+
+  /* Makes the Testimonials image fill the screen width. */
+  .testimonials__image {
+    width: 100%;
+  }
+
+  /* Makes the Testimonials text fill the screen width. */
+  .testimonials__content {
+    width: 100%;
+  }
+
+  /* Reduces the Testimonials heading size on phones. */
+  .testimonials__title {
+    font-size: 32px;
+  }
+
+  /* Stacks the CTA heading and buttons vertically on phones. */
+  .cta__row {
+    flex-direction: column;
+  }
+
+  /* Makes the CTA heading full width and centered. */
+  .cta__row h2 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* Makes the CTA buttons use the full available width. */
+  .cta__buttons {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  /* Arranges footer columns into two columns on phones. */
+  .footer__row {
+    flex-wrap: wrap;
+    gap: 32px 0;
+  }
+
+  /* Makes each footer column take half the width. */
+  .footer__column {
+    width: 50%;
+  }
+
+  /* Stacks the footer logo, copyright, and social icons. */
+  .footer__bottom {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Reduces the Features heading size on phones. */
+  .container__title {
+    font-size: 32px;
+  }
+
+  /* Positions the mobile menu offscreen so it can slide in. */
   .nav__link--list {
+    display: flex;
     position: absolute;
-    top: 80px;
+    top: 10px;
     left: 0;
     width: 100%;
     background-color: white;
@@ -1142,16 +1330,118 @@ RESPONSIVE
     padding: 24px 0;
     gap: 24px;
     z-index: 100;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition:
+      transform 300ms ease,
+      visibility 300ms ease;
   }
 
-  /* Displays the mobile navigation when the menu is opened. */
+  /* Makes mobile navigation links black, except Sign Up. */
+  .nav__link--anchor:not(.nav__link--anchor-primary) {
+    color: black;
+  }
+
+  /* Centers the Sign Up button directly below Login. */
+  .nav__link--list li:last-child .nav__link--anchor {
+    margin-left: 30px;
+  }
+
+  /* Slides the mobile menu from right to left when opened. */
   .menu--open .nav__link--list {
-    display: flex;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* Displays the X in the top-right corner of the mobile menu. */
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+
+  /* Styles the X as a clickable close button. */
+  .nav__close button {
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: black;
+    cursor: pointer;
   }
 }
 
-/* TABLETS: Screens 768px to 1024px. */
+/* 
+
+TABLETS: Screens 768px to 1024px. 
+
+*/
+
 @media (min-width: 768px) and (max-width: 1024px) {
+  /* Adds space along both edges of tablet screens. */
+  .container {
+    padding: 0 24px;
+  }
+
+ /* Displays the hamburger menu and moves it slightly right on tablets. */
+.btn__menu {
+  display: block;
+  margin-right: -10px;
+}
+
+  /* Hides regular links and creates the tablet dropdown menu. */
+  .nav__link--list {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    gap: 24px;
+    z-index: 100;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition:
+      transform 300ms ease,
+      visibility 300ms ease;
+  }
+
+  /* Opens the tablet menu when the hamburger is clicked. */
+  .menu--open .nav__link--list {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* Displays the X close button on tablets. */
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+
+  /* Styles the X close button. */
+  .nav__close button {
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: black;
+    cursor: pointer;
+  }
+
+  /* Makes tablet navigation links black, except Sign Up. */
+  .nav__link--anchor:not(.nav__link--anchor-primary) {
+    color: black;
+    font-size: 18px;
+  }
+
+  /* Moves the Sign Up button slightly to the right on tablets. */
+  .nav__link--list li:last-child .nav__link--anchor {
+    margin-left: 30px;
+  }
+
   .hero .row {
     gap: 20px; /* Reduces space between text and image. */
   }
