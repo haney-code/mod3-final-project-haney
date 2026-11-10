@@ -478,6 +478,7 @@ STEPS SECTION
   display: flex;
   flex-direction: column;
   transform: translateY(-120px); /* Moves the text column above the image. */
+  padding-left: 48px;
 }
 
 /* Displays each step's number and text side by side. */
@@ -530,13 +531,17 @@ STEPS SECTION
 
 .steps__image::after {
   content: "";
+  opacity: 0.2; /* Makes the purple dots slightly transparent. */
   position: absolute;
   right: 50%;
   transform: translateX(50%);
   bottom: -56px;
   width: 140px;
   height: 120px;
-  background-image: radial-gradient(#c4b5fd 4px, transparent 4px);
+  background-image: radial-gradient(
+    rgb(100, 21, 255) 4px,
+    transparent 4px
+  ); /* Makes the decorative dots purple. */
   background-size: 14px 12px;
   z-index: 0;
 }
@@ -580,12 +585,20 @@ VALUES SECTION
   align-items: center;
   gap: 12px;
   justify-content: flex-start;
+  text-align: left; /* Left-aligns the icon and heading text. */
 }
 
 .values__principles {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
+  gap: 32px; /* Adds space between the two paragraphs. */
+}
+
+.values__principle {
+  flex: 1; /* Gives each principle equal space. */
+  min-width: 0;
+  text-align: left; /* Left-aligns each principle's content. */
 }
 
 .values__principle p {
@@ -604,6 +617,7 @@ VALUES SECTION
   border-radius: 50%;
   background-color: #9ae6b4; /* Light green circle. */
   flex-shrink: 0;
+  margin: 0; /* Removes the figure's default margins. */
 }
 
 /* Makes the Professionalism icon light red-orange. */
@@ -1134,25 +1148,54 @@ Adjusts navigation for tablets and mobile devices.
     font-size: 32px;
   }
 
-  /* Displays one feature per row on phones. */
+  /* Centers the Hero heading on mobile devices. */
+  .hero h1 {
+    text-align: center;
+  }
+
+  /* Centers the Hero paragraph on mobile devices. */
+  .hero p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Centers each feature's icon, heading, and paragraph on phones. */
   .feature {
     width: 100%;
-  }
-
-  /* Stacks Quality Work text and image vertically on phones. */
-  .quality .row {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  /* Makes Quality Work text fill the screen width. */
+  /* Centers the feature description text. */
+  .feature__description {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Places the Quality Work image above the text on phones. */
+  .quality .row {
+    flex-direction: column-reverse;
+  }
+
+  /* Centers the Quality Work text on phones. */
   .quality__text {
     width: 100%;
     padding: 0 12px;
+    text-align: center;
+    align-items: center;
   }
 
-  /* Makes the Quality Work image fill the screen width. */
+  /* Centers the Learn More button on phones. */
+  .quality__button {
+    align-self: center;
+  }
+
+  /* Adds space between the Quality Work image and text. */
   .quality__image {
     width: 100%;
+    margin-bottom: 24px;
   }
 
   /* Reduces the Quality Work heading size on phones. */
@@ -1165,15 +1208,33 @@ Adjusts navigation for tablets and mobile devices.
     flex-direction: column;
   }
 
-  /* Makes the Steps image fill the screen width. */
+  /* Adds space between the Steps image and text. */
   .steps__image {
     width: 100%;
+    margin-bottom: 80px;
   }
 
-  /* Makes the Steps text fill the screen width. */
+  /* Centers the Steps section text on phones. */
   .steps__text {
     width: 100%;
     transform: none;
+    padding: 0 12px;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Stacks each step number above its description. */
+  .steps__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  /* Removes extra space between step numbers and headings. */
+  .steps__item h3,
+  .steps__item h4 {
+    margin: 0;
   }
 
   /* Reduces the Steps heading size on phones. */
@@ -1186,20 +1247,25 @@ Adjusts navigation for tablets and mobile devices.
     transform: none;
   }
 
-  /* Stacks Values text and image vertically on phones. */
+  /* Places the Values image above the content on phones. */
   .values .row {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
-  /* Makes Values text fill the screen width. */
+  /* Centers all Values content on phones. */
   .values__content {
     width: 100%;
     transform: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Makes the Values image fill the screen width. */
+  /* Adds space between the Values image and content. */
   .values__image {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   /* Reduces the Values heading size on phones. */
@@ -1216,6 +1282,16 @@ Adjusts navigation for tablets and mobile devices.
   /* Makes each principle fill the available width. */
   .values__principle {
     width: 100%;
+  }
+
+  /* Centers each icon and heading side-by-side on phones. */
+  .values__principle-heading {
+    justify-content: center;
+  }
+
+  /* Centers the Affordable and Professionalism paragraphs on phones. */
+  .values__principle p {
+    text-align: center;
   }
 
   /* Stacks the three pricing cards vertically on phones. */
