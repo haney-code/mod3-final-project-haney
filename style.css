@@ -1018,7 +1018,7 @@ FOOTER SECTION
 .footer__row {
   display: flex; /* Places columns side by side. */
   justify-content: space-between; /* Distributes columns evenly. */
-  padding-left: 24px; /* Moves the left column inward. */
+  padding-left: 0;
 }
 
 /* Gives each column 20% of the available width. */
@@ -1330,6 +1330,52 @@ Adjusts navigation for tablets and mobile devices.
     font-size: 32px;
   }
 
+  /* Centers all Testimonials content on phones. */
+  .testimonials__content {
+    text-align: center;
+  }
+
+  /* Centers the five stars. */
+  .testimonial__rating {
+    justify-content: center;
+  }
+
+  /* Centers the customer's photo, name, and arrows. */
+  .testimonial__bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  /* Stacks the customer's photo, name, and arrows vertically. */
+  .testimonial__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  /* Centers the customer's name and title. */
+  .testimonial__author {
+    flex: 0 0 auto;
+    text-align: center;
+  }
+
+  /* Centers the two navigation arrows. */
+  .testimonial__arrows {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Adds white space on both sides of the blue CTA background. */
+  .cta {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
   /* Stacks the CTA heading and buttons vertically on phones. */
   .cta__row {
     flex-direction: column;
@@ -1348,21 +1394,32 @@ Adjusts navigation for tablets and mobile devices.
     flex-wrap: wrap;
   }
 
-  /* Arranges footer columns into two columns on phones. */
+  /* Centers the footer columns across both rows. */
   .footer__row {
     flex-wrap: wrap;
+    justify-content: center;
     gap: 32px 0;
+    padding-left: 0;
   }
 
-  /* Makes each footer column take half the width. */
+  /* Keeps three columns on top and two below, closer together. */
   .footer__column {
-    width: 50%;
+    width: 33.333%;
+    padding: 0 12px;
+    align-items: center;
+    text-align: center;
   }
 
-  /* Stacks the footer logo, copyright, and social icons. */
+  /* Keeps footer links on a single line. */
+  .footer__column a {
+    white-space: nowrap;
+  }
+
+  /* Adds space between the footer links and Treact logo. */
   .footer__bottom {
     flex-direction: column;
     gap: 24px;
+    margin-top: 96px;
   }
 
   /* Reduces the Features heading size on phones. */
