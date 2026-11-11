@@ -1552,16 +1552,43 @@ TABLETS: Screens 768px to 1024px.
     margin-left: 30px;
   }
 
+  /* Stacks and centers Hero content on tablets. */
   .hero .row {
-    gap: 20px; /* Reduces space between text and image. */
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
 
+  /* Makes the Hero text fill the available width. */
   .main__text {
-    flex: 0 0 50%; /* Keeps text at half the available width. */
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
   }
 
+  /* Places the Hero image below the text. */
   .main__image {
-    flex: 1; /* Uses the remaining space for the image. */
+    width: 100%;
+    max-width: 600px;
+  }
+
+  /* Centers the Hero paragraph. */
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Centers the email field. */
+  .email-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Centers the customer logos. */
+  .customers-logo-strip {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h1 {
@@ -1648,13 +1675,17 @@ TABLETS: Screens 768px to 1024px.
     font-size: 36px; /* Reduces heading size. */
   }
 
+  /* Stacks the three pricing boxes vertically on tablets. */
   .plans {
-    justify-content: center; /* Centers the pricing cards. */
-    gap: 24px; /* Adds space between cards. */
+    flex-direction: column;
+    align-items: center;
+    gap: 48px; /* Adds more vertical space between pricing boxes. */
   }
 
+  /* Sets the width of each pricing box. */
   .plan {
-    width: calc(50% - 12px); /* Displays two cards per row. */
+    width: 100%;
+    max-width: 450px;
   }
 
   /* Adjusts the Testimonials section for tablets. */
@@ -1696,15 +1727,16 @@ TABLETS: Screens 768px to 1024px.
     gap: 16px; /* Reduces space between buttons. */
   }
 
-  /* Adjusts the Footer section for tablets. */
-  .footer__row {
-    flex-wrap: wrap; /* Allows columns to move onto another row. */
-    gap: 32px 0; /* Adds vertical space between rows. */
-  }
+/* Keeps all five footer columns in one row on tablets. */
+.footer__row {
+  flex-wrap: nowrap;
+  gap: 16px;
+}
 
-  .footer__column {
-    width: 33.333%; /* Displays three columns per row. */
-  }
+/* Gives each footer column equal space. */
+.footer__column {
+  width: 20%;
+}
 
   .footer__bottom {
     gap: 24px; /* Adds space between footer elements. */
